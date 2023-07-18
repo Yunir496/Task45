@@ -10,7 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appcontext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
         Car car = context.getBean("car", Car.class);
         System.out.println(car);
     }

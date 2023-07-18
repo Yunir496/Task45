@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="wheels" class="org.example.Wheel">
+        <constructor-arg value="4" name="count"></constructor-arg>
+    </bean>
+    <bean id="types" class="org.example.Type">
+        <constructor-arg value="sedan" name="type"></constructor-arg>
+    </bean>
+    <bean id="transm" class="org.example.Transmission">
+        <constructor-arg value="AMT" name="type"></constructor-arg>
+    </bean>
+    <bean id="engines" class="org.example.Engine">
+        <constructor-arg value="2.0" name="vol"></constructor-arg>
+    </bean>
+    <bean id="car" class="org.example.Car">
+        <constructor-arg ref="wheels" name="wheel"></constructor-arg>
+        <constructor-arg ref="types" name="type"></constructor-arg>
+        <constructor-arg ref="transm" name="transmission"></constructor-arg>
+        <constructor-arg ref="engines" name="engine"></constructor-arg>
+    </bean>
+</beans>
